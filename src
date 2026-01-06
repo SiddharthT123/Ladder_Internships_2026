@@ -1,0 +1,188 @@
+import google.genai as genai
+
+api_key = input("Enter your Gemini API key:  ").strip()
+
+client = genai.Client(api_key=api_key)
+
+response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents="Say hello"
+)
+
+print(response.text)
+
+
+#model = genai.GenerativeModel("gemini-pro")
+
+
+
+print ("You are going to be learning how to code. We will cover variables, data types, lists, sets, loops, e.t.c.")
+print ("Let's get started!")
+name = input("How are you doing today?")
+print("Ok,Let us start with variables and data types.")
+print ("A variable is a named container used to store information in a program. It allows programmers to save values and reuse or change them later without rewriting the value each time.")
+print ("For example, a variable can store a number like an age, a word like a name, or even a true/false value. " )
+print ("Variable names should be clear and meaningful, must start with a letter or underscore, cannot contain spaces, and cannot be reserved words used by the programming language. ")
+print ("Using good variable names makes code easier to read and understand.")
+
+print ("Every variable has a data type, which tells the computer what kind of value the variable holds and how it can be used.")
+print ("Common data types include integers, which are whole numbers such as 5 or 16; floats, which are numbers with decimals like 3.5 or 9.99; strings, which store text and are written inside quotes, such as names or sentences; and booleans, which can only be true or false. ")
+print ("Data types are important because different types behave differently—for example, adding two numbers performs math, while adding two strings joins text together.")
+print ("Understanding variables and data types is essential because they form the foundation of how programs store, process, and make decisions using data.")
+question1 = input("Do you have any questions? (yes/no): ")
+if question1 == "no":
+    print ("Great! Let's move on.")
+else:
+    ask1 = input("What questions do you have? ")
+    response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents=ask1
+    )
+    print(response.text)
+    
+    
+    
+print ("Let's move on.")
+
+
+print ("Operators are symbols used to perform actions on variables and values. Common operators include arithmetic operators such as addition (+), subtraction (−), multiplication (*), division (/), and modulus (%), which are used for mathematical calculations.")
+print (" Comparison operators like equal to (==), not equal to (!=), greater than (>), and less than (<) are used to compare values and return a boolean result (true or false).")
+print (" Logical operators such as and, or, and not are used to combine or reverse conditions, especially in decision-making statements like if-statements.")
+print (" Operators allow programs to calculate results, compare data, and make logical decisions.")
+
+print ("A list is a collection data type used to store multiple values in a single variable.")
+print ("Lists are ordered, meaning each item has a specific position, and they are mutable, which means their contents can be changed after creation.")
+print ("Lists are written using square brackets, for example: [1, 2, 3, 4]. You can add, remove, or modify elements in a list, making them useful for storing data that may change, such as scores, names, or values entered by a user.")
+question2 = input("Do you have any questions? (yes/no): ")
+if question2 == "no":
+    print ("Great! Let's move on.")
+else:
+    ask2 = input("What questions do you have? ")
+    response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents=ask2
+    )
+    print(response.text)
+   
+
+print ("Let's move on.")
+print ("A tuple is similar to a list in that it stores multiple values in one variable and keeps them in order, but tuples are immutable, meaning they cannot be changed once they are created.")
+print (" Tuples are written using parentheses, such as (1, 2, 3).")
+print ("Because tuples cannot be modified, they are often used to store data that should remain constant, like coordinates, dates, or fixed settings in a program.")
+
+print ("A set is a collection of unique values, meaning it does not allow duplicate elements. ")
+print ("Sets are unordered, so the items do not have fixed positions, and they are written using curly braces, for example {1, 2, 3}. ")
+print ("Sets are useful for eliminating duplicates and performing mathematical set operations such as union, intersection, and difference. ")
+print ("Together, operators and these collection types help programmers manipulate data efficiently and organize information in meaningful ways.")
+question3 = input("Do you have any questions about variables? (yes/no): ")
+if question3 == "no":
+    print ("Great! Let's move on.")
+else:
+    ask3 = input("What questions do you have? ")
+    response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents=ask3
+    )
+    print(response.text)
+    
+print ("Let's move on.")
+print ("Conditional statements allow a program to make decisions based on whether a condition is true or false.")
+print (" The most common ones are if, else if (called elif in Python), and else. ")
+print ("An if statement runs a block of code only when its condition is true. If that condition is false, the program can check another condition using elif, and if none of the conditions are true, the else block runs. ")
+print ("These statements rely on comparison and logical operators and are essential for controlling the flow of a program, such as deciding whether a student passed an exam or whether a user can access a feature.")
+
+print ("Loops are used to repeat a block of code multiple times without rewriting it.")
+print (" A for loop is typically used when you know how many times you want the loop to run, such as looping through a list of values or repeating an action a fixed number of times. ")
+print (" The loop runs once for each item in a sequence, executing the same code each time with a different value. ")
+print (" This makes for loops especially useful for processing collections like lists, tuples, or sets.")
+
+print ("A while loop continues running as long as a given condition remains true. ")
+print ("Unlike a for loop, a while loop is used when the number of repetitions is not known in advance, such as waiting for valid user input or repeating an action until a goal is met. ")
+print ("Because while loops depend on conditions, it is important to update the condition inside the loop; otherwise, the program may run forever in what is called an infinite loop. ")
+print ("Together, conditionals and loops allow programs to make decisions, repeat tasks efficiently, and respond dynamically to different situations.")
+question4 = input("Do you have any questions about variables? (yes/no): ")
+if question4 == "no":
+    print ("Great! Let's move on.")
+else:
+    ask4 = input("What questions do you have? ")
+    response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents=ask4
+    )
+    print(response.text)
+    
+print ("Let's move on.")
+print ("A function is a reusable block of code designed to perform a specific task.")
+print (" Functions help organize programs, reduce repetition, and make code easier to understand and maintain.")
+print (" A function can take parameters (inputs), perform operations using those inputs, and optionally return a result.")
+print (" By calling a function, the programmer can run the same logic multiple times with different values, which is especially useful for tasks like calculations, data processing, or checking conditions.")
+
+print ("The range construct is commonly used with loops to generate a sequence of numbers.")
+print (" It produces values starting from a given number and stops before an ending number, which makes it useful for repeating actions a specific number of times.") 
+print (" For example, range is often used in for loops to control how many times the loop runs or to access elements using index positions.")
+print (" Because it does not store all numbers at once, range is memory-efficient and commonly used in iteration.")
+
+print ("An array is a structure used to store multiple values of the same data type in a single variable.")
+print (" In Python, arrays are most commonly represented using lists, which act like dynamic arrays and allow elements to be accessed using index numbers starting from zero.")
+print (" Arrays make it easier to manage large sets of related data, such as test scores or temperatures, and allow programs to loop through and manipulate each value efficiently.")
+print (" Functions, range, and arrays together form a powerful foundation for writing organized, efficient, and scalable programs.")
+question5 = input("Do you have any questions? (yes/no): ")
+if question5 == "no":
+    print ("Great! Let's move on.")
+else:
+    ask5 = input("What questions do you have? ")
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=ask5
+    )
+    print(response.text)
+    
+print ("Let's move on.")
+print ("In Python, dates and times are handled using the datetime module, which allows programs to work with real-world concepts like days, months, years, and time.")
+print (" A date can represent a specific calendar day, while a time can include hours, minutes, and seconds." )
+print (" Using dates is important for tasks such as tracking deadlines, calculating ages, logging events, or measuring how much time has passed.")
+print (" Python makes it easy to get the current date and time, compare two dates, or find the difference between them, which is often returned as a time span (for example, the number of days between two dates).")
+print (" Python also includes powerful tools for mathematics, both built-in and through the math module.")
+print (" Basic math operations like addition, subtraction, multiplication, division, exponents, and modulus are built directly into the language and work with numbers such as integers and floats.")
+print (" For more advanced mathematical operations, the math module provides functions like square roots, powers, rounding, absolute values, and trigonometric functions.")
+print (" These tools are especially useful in scientific calculations, geometry, physics, data analysis, and problem-solving tasks.")
+print (" Together, Python’s date-handling features and math capabilities allow programs to model real-life situations accurately.")
+print (" Dates help manage time-based data and events, while math enables precise calculations and logical problem solving.")
+print (" Mastering both is essential for writing practical programs that can analyze data, make predictions, and automate tasks that depend on time and numerical reasoning.")
+question6 = input("Do you have any questions? (yes/no): ")
+if question6 == "no":
+    print ("Great! Let's move on.")
+else:
+    ask6 = input("What questions do you have? ")
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=ask6
+    )
+    print(response.text)
+    
+print ("Let's move on.")
+print ("User input allows a Python program to interact with the person running it by accepting information during execution. " )
+print (" This is commonly done using the input() function, which pauses the program and waits for the user to type something. " )
+print ("Whatever the user enters is read as text (a string), so it often needs to be converted into another data type, such as an integer or float, before being used in calculations." )
+print (" User input is essential for creating interactive programs, such as quizzes, calculators, or applications that respond differently based on user choices.")
+
+print ("API keys are special, private strings used to authenticate a program when it connects to an external service, such as a weather API, AI service, or map provider." )
+print (" An API key tells the service who is making the request and ensures that only authorized users can access its features." )
+print (" Because API keys grant access to paid or sensitive resources, they must be kept secret and never hard-coded directly into public code. " )
+print ("Instead, they are typically stored in environment variables or separate configuration files and then read by the program when needed.")
+
+print ("Together, user input and API keys enable programs to be both interactive and powerful. " )
+print ("User input lets a program respond to real-time information from people, while API keys allow it to securely connect to external services and retrieve data or perform actions beyond what is possible with Python alone." )
+print ("Understanding both concepts is crucial for building real-world applications that are secure, flexible, and responsive")
+question7 = input("Do you have any questions? (yes/no): ")
+if question7 == "no":
+    print ("Good job learning the basics of coding!")
+else:
+    ask7 = input("What questions do you have? ")
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=ask7
+    )
+    print(response.text)
+   
+print ("Good job learning the basics of coding!")
